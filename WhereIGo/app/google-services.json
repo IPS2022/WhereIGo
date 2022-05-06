@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "565738954451",
+    "project_id": "whereigo-f28da",
+    "storage_bucket": "whereigo-f28da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565738954451:android:d13f41ef4dfc6768e5fe26",
+        "android_client_info": {
+          "package_name": "com.example.whereigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565738954451-et83jrq0i447848qvplae5f3c005eroc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whereigo",
+            "certificate_hash": "8a2d14d7327278468dc5b6aa90c09cc41c238aab"
+          }
+        },
+        {
+          "client_id": "565738954451-4jtt7t4n91bl2nhvlp42vl1d11f4a5l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAKPv5aDtM_gxG763qGDA_TiRlM-MsQJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565738954451-4jtt7t4n91bl2nhvlp42vl1d11f4a5l6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
