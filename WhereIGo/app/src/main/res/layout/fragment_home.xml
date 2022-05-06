@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".FragmentHome">
+
+<TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical"
     tools:context=".FragmentHome">
 
@@ -16,5 +21,11 @@
         android:textSize="50sp"/>
 
 
+=======
+    android:gravity="center"
+    android:text="홈"
+    android:textColor="@android:color/black"
+    android:textSize="50sp"/>
+>>>>>>> parent of 153fda4 (로그인 기능 완성)
 
 </LinearLayout>
