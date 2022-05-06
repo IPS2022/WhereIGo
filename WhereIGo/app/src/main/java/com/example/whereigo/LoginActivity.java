@@ -25,6 +25,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -70,11 +72,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
                 startActivityForResult(intent, RED_SIGN_GOOGLE);
-
-                // 성공
-                Toast.makeText(LoginActivity.this, "getSignInIntent", Toast.LENGTH_SHORT).show();
             }
         });
+
+        signOut2();
     }
 
     // 구글 로그인 진행 시 결과 되돌려 받는 장소
@@ -88,8 +89,6 @@ public class LoginActivity extends AppCompatActivity {
                 // 구글 로그인 정보 담고 있다.
                 GoogleSignInAccount account = result.getSignInAccount();
                 resultLogin(account);
-
-                Toast.makeText(LoginActivity.this, "onActivityResult", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -116,5 +115,38 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onConnectionFailed(@NonNull ConnectionResult connectionResutl) {
 
+    }
+
+    public void signOut2() {
+        googleApiClient.connect();
+        googleApiClient.registerConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
+
+            @Override
+            public void onConnected(@Nullable Bundle bundle) {
+                auth.signOut();
+                if (googleApiClient.isConnected()) {
+                    Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+                        @Override
+                        public void onResult(@NonNull Status status) {
+                            /*
+                            if (status.isSuccess()) {
+                                setResult(ResultCode.SIGN_OUT_SUCCESS);
+                            } else {
+                                setResult(ResultCode.SIGN_OUT_FAIL);
+                            }
+                            finish();
+                            */
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onConnectionSuspended(int i) {
+                //setResult(ResultCode.SIGN_OUT_FAIL);
+                finish();
+            }
+        });
     }
 }
