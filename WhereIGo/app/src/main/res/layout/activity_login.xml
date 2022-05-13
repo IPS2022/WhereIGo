@@ -5,30 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
 
     <!-- tools:context=".LoginActivity"-->
 
-    <TextView
-        android:layout_marginTop="160dp"
-        android:layout_marginBottom="160dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
         android:layout_gravity="center"
-        android:textSize="50dp"
-        android:textColor="#2FA599"
-        android:text="아파, 어디가?"/>
-
-    <Button
-        android:layout_gravity="center"
-        android:id="@+id/googleLoginBtn"
+        android:layout_marginTop="100dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#2FA599"
-        android:fontFamily="@font/mainfont"
-        android:text="login"
-        android:textColor="@color/black" />
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/loginlogo" />
+
+    <ImageButton
+        android:id="@+id/googleLoginBtn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/login"
+        android:background="@android:color/transparent"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        />
 
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +39,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btn_google;
+    private ImageButton btn_google;
     private FirebaseAuth auth;
     private GoogleApiClient googleApiClient;
     private static final int RED_SIGN_GOOGLE=100;
