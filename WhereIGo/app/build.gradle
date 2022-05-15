@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -40,6 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //bottom navi
+    //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
     implementation platform('com.google.firebase:firebase-bom:29.3.1')
 
@@ -51,4 +53,25 @@ dependencies {
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
+
+    //구글맵 사용을 위함
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //for API place autocomplete
+    //implementation 'com.google.android.gms:play-services-places:16.0.0'
+    implementation 'com.google.android.libraries.places:places:1.0.0'
+
+    //rest api 사용 (현재 위치 주변 병원 찾기 기능)
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.6.4'
+    implementation 'org.jetbrains:annotations:15.0'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.1'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 }
