@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,15 +14,39 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:srcCompat="@drawable/whereigo_logo" />
+=======
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/selectGender"
+    >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/whereigo" />
+>>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
         android:gravity="center"
         android:paddingTop="50dp"
         android:textSize="25dp"
         android:textStyle="bold"
+=======
+        android:paddingTop="70dp"
+        android:gravity="center"
+        android:textSize="25dp"
+>>>>>>> Stashed changes
         android:textColor="#2196f3"
         android:text="성별을 선택하세요" />
 
@@ -29,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+<<<<<<< Updated upstream
         android:paddingTop="20dp"
         >
 
@@ -59,10 +85,45 @@
             android:background="@color/white"
             android:textSize="25dp"
             android:textStyle="bold"
+=======
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="140dp"
+            android:layout_height="366dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            app:srcCompat="@drawable/woman" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            app:srcCompat="@drawable/man" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#7cced2"
+            android:backgroundTint="@color/white"
+            android:textSize="20dp"
+>>>>>>> Stashed changes
             android:textColor="#2196f3"
             android:text="여성" />
 
         <Button
+<<<<<<< Updated upstream
             android:id="@+id/manBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,6 +134,17 @@
             android:textColor="#2196f3"
             android:text="남성" />
 
+=======
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#7cced2"
+            android:backgroundTint="@color/white"
+            android:textSize="20dp"
+            android:textColor="#2196f3"
+            android:text="남성" />
+>>>>>>> Stashed changes
     </LinearLayout>
 
 
