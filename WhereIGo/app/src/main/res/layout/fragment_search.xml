@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/mapMain"
     tools:context=".FragmentSearch">
 
-    <TextView
+    #로고
+    <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="검색"
-        android:textColor="@android:color/black"
-        android:textSize="50sp"/>
+        android:layout_height="70dp"
+        android:src="@drawable/whereigo_logo" />
+
+    # searchView
+    <androidx.appcompat.widget.SearchView
+        android:layout_marginTop="20dp"
+        android:id="@+id/search_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:queryHint="아파 ! 어디가 ?"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relLayout"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="306dp"
+        android:src="@drawable/map_ex" />
+
 
 </LinearLayout>

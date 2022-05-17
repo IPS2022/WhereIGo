@@ -1,34 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FragmentMypage">
 
-    <TextView
+    #로고
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top"
-        android:text="마이페이지"
-        android:textColor="@android:color/black"
-        android:textSize="50sp"/>
+        android:layout_height="70dp"
+        android:src="@drawable/whereigo_logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:src="@drawable/userpage" />
+
+        <TextView
+            android:id="@+id/loginNickname"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="UserName"
+            android:textSize="20sp"
+            android:textColor="#2196f3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/loginEmail"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="UserEmail"
+            android:textSize="20sp"
+            android:textColor="#2196f3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:gravity="center"
+            android:id="@+id/mypage_logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#2196f3"
+            android:textStyle="bold"
+            android:text="로그아웃"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:textSize="20dp"
+            android:text="내가 스크랩한 질병" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+
+    </ScrollView>
 
 
-    <TextView
-        android:id="@+id/loginNickname"
-        android:gravity="center"
-        android:text="닉네임"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:gravity="bottom"
-        android:id="@+id/mypage_logout_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="로그아웃"/>
 
 </LinearLayout>
