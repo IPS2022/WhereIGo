@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/selectGender"
+    >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/whereigo" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#2196f3"
+        android:text="성별을 선택하세요" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/womanImg"
+            android:layout_width="match_parent"
+            android:layout_height="319dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/woman" />
+
+        <ImageView
+            android:id="@+id/manImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/man" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/womanBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#2196f3"
+            android:text="여성" />
+
+        <Button
+            android:id="@+id/manBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#2196f3"
+            android:text="남성" />
+
+    </LinearLayout>
+
+</LinearLayout>
