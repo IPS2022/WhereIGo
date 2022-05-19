@@ -1,13 +1,13 @@
 <resources>
-<string name="app_name">WhereIGo</string>
+    <string name="app_name">WhereIGo</string>
 
-<string-array name="disease">
-    <item>a</item>
-    <item>b</item>
-    <item>c</item>
-    <item>d</item>
-    <item>e</item>
-    <item>f</item>
-    <item>g</item>
-</string-array>
+    <string-array name="disease">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
+        <item>g</item>
+    </string-array>
 </resources>
