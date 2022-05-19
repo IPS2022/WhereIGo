@@ -1,7 +1,13 @@
 package com.example.whereigo;
 
+import static android.content.ContentValues.TAG;
+
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +19,29 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class FragmentHome extends Fragment implements View.OnClickListener  {
 
     ImageButton head, neck, shoulder, stomache, leftarm, rightarm, leftleg, rightleg;
     ArrayList<String> mSelectedItems;
     AlertDialog.Builder builder;
+
+    //database
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
+    Map<String, Object> map;
+    List<String> list;
+    String[] items;
+    String searchpart;
 
     @Nullable
     @Override
@@ -46,32 +68,65 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         rightleg.setOnClickListener(this);
 
 
+        //database
+        database=FirebaseDatabase.getInstance();
+
         return view;
+    }
+
+
+    public void startdatabaseEvent(String part){
+        databaseReference=database.getReference(part);
+        searchpart=part;
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                map = (Map<String,java.lang.Object>) dataSnapshot.getValue();
+                list = new ArrayList<String>(map.keySet());
+                items = list.stream().toArray(String[]::new);
+                Log.d(TAG, "Value is: " + list);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
     }
 
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.head) {
-            showDialog();
+            startdatabaseEvent("머리");
+        }else if (view.getId() == R.id.neck){
+            startdatabaseEvent("목");
+        }else if (view.getId() == R.id.shoulder){
+            startdatabaseEvent("가슴");
+        }else if (view.getId() == R.id.stomache){
+            startdatabaseEvent("배");
+        }else if (view.getId() == R.id.leftarm){
+            startdatabaseEvent("팔");
+        }else if (view.getId() == R.id.rightarm){
+            startdatabaseEvent("팔");
+        }else if (view.getId() == R.id.leftleg){
+            startdatabaseEvent("다리");
+        }else if (view.getId() == R.id.rightleg){
+            startdatabaseEvent("다리");
         }
-
-
-
+        showDialog();
     }
+
 
     public void showDialog() {
         mSelectedItems = new ArrayList<>();
+
         builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("증상을 선택하세요");
 
-        builder.setMultiChoiceItems(R.array.disease, null, new DialogInterface.OnMultiChoiceClickListener() {
+        builder.setMultiChoiceItems(items, null, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-
-                //데이터 리스트 담기
-                String[] items = getResources().getStringArray(R.array.disease);
-
                 if (isChecked) {
                     mSelectedItems.add(items[which]);
                 } else if (mSelectedItems.contains(items[which])) {
@@ -81,16 +136,21 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
 
         });
         //ok 이벤트
-
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 String final_selection = "";
+
                 for (String item : mSelectedItems) {
-                    final_selection = final_selection + "\n" + item;
+                    final_selection = final_selection+"\n"+item;
                 }
-                Toast.makeText(getActivity().getApplicationContext(), "선택된 증상은" + final_selection, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), "선택된 증상은" + final_selection, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(),Detail1Activity.class);
+                intent.putExtra("part",searchpart);
+                String diseases=final_selection.trim();
+                intent.putExtra("disease",diseases);
+                startActivity(intent);
             }
 
         });
@@ -104,8 +164,6 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-
-
     }
 
 }
