@@ -22,6 +22,7 @@
         android:id="@+id/search_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:queryBackground="@drawable/searchbackground"
         app:iconifiedByDefault="false"
         app:queryHint="아파 ! 어디가 ?"/>
 

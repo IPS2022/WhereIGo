@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <GridLayout
-        android:id="@+id/menu_item_id"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:columnCount="2"
-        android:rowCount="1"
-        android:layout_margin="20dp">
-        <ImageView
-            android:id="@+id/menu_item_img"
-            android:layout_width="100dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/border_round"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:paddingLeft="20dp"
-            android:layout_column="0"
-            android:src="@drawable/ic_launcher_foreground"/>
-        <TextView
-            android:id="@+id/menu"
-            android:layout_column="1"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:layout_gravity="center"
-            android:text=""/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/menu_item_title"
-            android:layout_column="1"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:layout_gravity="center"
-            android:text=""/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-    </GridLayout>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="20dp"
+                    android:text="질병 이름"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
 
 
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="진료과 : "
+                    android:textColor="#2196f3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
