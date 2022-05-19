@@ -2,7 +2,10 @@ package com.example.whereigo;
 
 import static android.content.ContentValues.TAG;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,6 +41,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
     Map<String, Object> map;
     List<String> list;
     String[] items;
+    String searchpart;
 
     @Nullable
     @Override
@@ -73,6 +77,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
 
     public void startdatabaseEvent(String part){
         databaseReference=database.getReference(part);
+        searchpart=part;
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -141,6 +146,11 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
                     final_selection = final_selection+"\n"+item;
                 }
                 Toast.makeText(getActivity().getApplicationContext(), "선택된 증상은" + final_selection, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(),Detail1Activity.class);
+                intent.putExtra("part",searchpart);
+                String diseases=final_selection.trim();
+                intent.putExtra("disease",diseases);
+                startActivity(intent);
             }
 
         });
