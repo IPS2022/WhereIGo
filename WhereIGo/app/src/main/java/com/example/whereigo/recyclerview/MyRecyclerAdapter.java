@@ -1,6 +1,10 @@
 package com.example.whereigo.recyclerview;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.whereigo.Detail2Activity;
 import com.example.whereigo.R;
 
 import java.util.ArrayList;
@@ -42,7 +47,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         return data.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder{
         TextView disease;
         TextView doctor_part;
 
@@ -50,12 +55,27 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
             super(itemView);
             disease = (TextView) itemView.findViewById(R.id.disease);
             doctor_part = (TextView) itemView.findViewById(R.id.doctor_part);
+
+            itemView.setClickable(true);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos=getAdapterPosition();
+                    if (pos != RecyclerView.NO_POSITION){
+                        Intent intent=new Intent(view.getContext(), Detail2Activity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("detail_disease",disease.getText().toString());
+                        Log.d(TAG, "Value ispleasefsfaf " +disease.getText().toString());
+                        view.getContext().startActivity(intent);
+                    }
+                }
+            });
         }
 
         void onBind(Data item){
             disease.setText(item.getDisease());
             doctor_part.setText(item.getDoctorpart());
         }
+
     }
 }
 
