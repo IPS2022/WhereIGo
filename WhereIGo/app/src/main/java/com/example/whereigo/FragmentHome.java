@@ -4,9 +4,13 @@ import static android.content.ContentValues.TAG;
 
 import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -114,9 +118,39 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         }else if (view.getId() == R.id.rightleg){
             startdatabaseEvent("다리");
         }
-        showDialog();
+        beforeshowDialog();
+
     }
 
+    public void beforeshowDialog(){
+        ProgressDialog TempDialog;
+        CountDownTimer mCountDownTimer;
+        int i=0;
+
+        TempDialog = new ProgressDialog(getActivity());
+        TempDialog.setMessage("Please wait...");
+        TempDialog.setCancelable(false);
+        TempDialog.setProgress(i);
+        TempDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        TempDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.GRAY));
+
+        TempDialog.show();
+        mCountDownTimer = new CountDownTimer(1200, 1000)
+        {
+            public void onTick(long millisUntilFinished)
+            {
+                TempDialog.setMessage("Please wait..");
+            }
+
+            public void onFinish()
+            {
+                TempDialog.dismiss();
+                //database 찐
+                showDialog();
+
+            }
+        }.start();
+    }
 
     public void showDialog() {
         mSelectedItems = new ArrayList<>();
