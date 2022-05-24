@@ -72,7 +72,7 @@ public class FragmentMypage extends Fragment {
             //@SuppressLint("DefaultLocale")
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                diaryTextView.setVisibility(View.VISIBLE);
+                //diaryTextView.setVisibility(View.VISIBLE);
                 save_Btn.setVisibility(View.VISIBLE);
                 contextEditText.setVisibility(View.VISIBLE);
                // textView22.setVisibility(View.INVISIBLE);
