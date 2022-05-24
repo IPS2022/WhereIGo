@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ public class FragmentMypage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_mypage, container, false);
-        super.onCreate(savedInstanceState);
+        //super.onCreate(savedInstanceState);
         Button logoutBtn = (Button) rootView.findViewById(R.id.mypage_logout_btn);
         TextView tv_username = (TextView) rootView.findViewById(R.id.loginNickname);
         TextView tv_useremail = (TextView) rootView.findViewById(R.id.loginEmail);
@@ -50,6 +51,7 @@ public class FragmentMypage extends Fragment {
         cha_Btn = (Button) rootView.findViewById(R.id.cha_Btn);
         textView22 = (TextView) rootView.findViewById(R.id.textView22);
         contextEditText = (EditText) rootView.findViewById(R.id.contextEditText);
+
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,14 +69,15 @@ public class FragmentMypage extends Fragment {
         tv_useremail.setText(user.getEmail());*/
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            //@SuppressLint("DefaultLocale")
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
                 save_Btn.setVisibility(View.VISIBLE);
                 contextEditText.setVisibility(View.VISIBLE);
-                textView22.setVisibility(View.INVISIBLE);
-                cha_Btn.setVisibility(View.INVISIBLE);
-                del_Btn.setVisibility(View.INVISIBLE);
+               // textView22.setVisibility(View.INVISIBLE);
+               // cha_Btn.setVisibility(View.INVISIBLE);
+               // del_Btn.setVisibility(View.INVISIBLE);
                 diaryTextView.setText(String.format("%d / %d / %d", year, month + 1, dayOfMonth));
                 contextEditText.setText("");
                 checkDay(year, month, dayOfMonth);
@@ -87,10 +90,10 @@ public class FragmentMypage extends Fragment {
                 saveDiary(fname);
                 str = contextEditText.getText().toString();
                 textView22.setText(str);
-                save_Btn.setVisibility(View.INVISIBLE);
+                //save_Btn.setVisibility(View.INVISIBLE);
                 cha_Btn.setVisibility(View.VISIBLE);
                 del_Btn.setVisibility(View.VISIBLE);
-                contextEditText.setVisibility(View.INVISIBLE);
+                //contextEditText.setVisibility(View.INVISIBLE);
                 textView22.setVisibility(View.VISIBLE);
 
             }
@@ -99,22 +102,22 @@ public class FragmentMypage extends Fragment {
         return rootView;
     }
 
-    private void checkDay(int year, int month, int dayOfMonth) {
+    public void checkDay(int year, int month, int dayOfMonth) {
         fname=""+year+"-"+(month+1)+""+"-"+dayOfMonth+".txt";//저장할 파일 이름설정
-        FileInputStream fis;//FileStream fis 변수
+        FileInputStream fis=null;//FileStream fis 변수
         try{
-            fis = getContext().openFileInput(readDay);
+            fis = getContext().openFileInput(fname);
 
             byte[] fileData = new byte[fis.available()];
             fis.read(fileData);
             fis.close();
             str=new String(fileData);
 
-            contextEditText.setVisibility(View.INVISIBLE);
+            //contextEditText.setVisibility(View.INVISIBLE);
             textView22.setVisibility(View.VISIBLE);
             textView22.setText(str);
 
-            save_Btn.setVisibility(View.INVISIBLE);
+            //save_Btn.setVisibility(View.INVISIBLE);
             cha_Btn.setVisibility(View.VISIBLE);
             del_Btn.setVisibility(View.VISIBLE);
 
@@ -122,12 +125,12 @@ public class FragmentMypage extends Fragment {
                 @Override
                 public void onClick(View view) {
                     contextEditText.setVisibility(View.VISIBLE);
-                    textView22.setVisibility(View.INVISIBLE);
+                   // textView22.setVisibility(View.INVISIBLE);
                     contextEditText.setText(str);
 
                     save_Btn.setVisibility(View.VISIBLE);
-                    cha_Btn.setVisibility(View.INVISIBLE);
-                    del_Btn.setVisibility(View.INVISIBLE);
+                    //cha_Btn.setVisibility(View.INVISIBLE);
+                  //  del_Btn.setVisibility(View.INVISIBLE);
                     textView22.setText(contextEditText.getText());
                 }
 
@@ -135,21 +138,21 @@ public class FragmentMypage extends Fragment {
             del_Btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    textView22.setVisibility(View.INVISIBLE);
+                   // textView22.setVisibility(View.INVISIBLE);
                     contextEditText.setText("");
                     contextEditText.setVisibility(View.VISIBLE);
                     save_Btn.setVisibility(View.VISIBLE);
-                    cha_Btn.setVisibility(View.INVISIBLE);
-                    del_Btn.setVisibility(View.INVISIBLE);
+                  //  cha_Btn.setVisibility(View.INVISIBLE);
+                   // del_Btn.setVisibility(View.INVISIBLE);
                     removeDiary(fname);
                 }
             });
             if(textView22.getText()==null){
-                textView22.setVisibility(View.INVISIBLE);
+                //textView22.setVisibility(View.INVISIBLE);
                 diaryTextView.setVisibility(View.VISIBLE);
                 save_Btn.setVisibility(View.VISIBLE);
-                cha_Btn.setVisibility(View.INVISIBLE);
-                del_Btn.setVisibility(View.INVISIBLE);
+               // cha_Btn.setVisibility(View.INVISIBLE);
+               // del_Btn.setVisibility(View.INVISIBLE);
                 contextEditText.setVisibility(View.VISIBLE);
             }
 
@@ -178,7 +181,7 @@ public class FragmentMypage extends Fragment {
 
         try{
             fos = getContext().openFileOutput(readDay, Context.MODE_PRIVATE);
-            String content = "";
+            String content=contextEditText.getText().toString();
             fos.write((content).getBytes());
             fos.close();
         }catch (Exception e){
