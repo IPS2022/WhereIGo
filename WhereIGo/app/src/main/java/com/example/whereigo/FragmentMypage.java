@@ -29,6 +29,7 @@ import java.io.IOException;
 public class FragmentMypage extends Fragment {
     public String fname=null;
     public String str=null;
+    public String readDay = null;
     private FirebaseAuth mAuth;
     public CalendarView calendarView;
     public Button cha_Btn,del_Btn,save_Btn;
@@ -38,7 +39,7 @@ public class FragmentMypage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_mypage, container, false);
-
+        super.onCreate(savedInstanceState);
         Button logoutBtn = (Button) rootView.findViewById(R.id.mypage_logout_btn);
         TextView tv_username = (TextView) rootView.findViewById(R.id.loginNickname);
         TextView tv_useremail = (TextView) rootView.findViewById(R.id.loginEmail);
@@ -48,7 +49,6 @@ public class FragmentMypage extends Fragment {
         del_Btn = (Button) rootView.findViewById(R.id.del_Btn);
         cha_Btn = (Button) rootView.findViewById(R.id.cha_Btn);
         textView22 = (TextView) rootView.findViewById(R.id.textView22);
-        textView3 = (TextView) rootView.findViewById(R.id.textView3);
         contextEditText = (EditText) rootView.findViewById(R.id.contextEditText);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +67,6 @@ public class FragmentMypage extends Fragment {
         tv_useremail.setText(user.getEmail());*/
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @SuppressLint("DefaultLocale")
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
@@ -104,12 +103,11 @@ public class FragmentMypage extends Fragment {
         fname=""+year+"-"+(month+1)+""+"-"+dayOfMonth+".txt";//저장할 파일 이름설정
         FileInputStream fis;//FileStream fis 변수
         try{
-            fis=getActivity().openFileInput(fname);
+            fis = getContext().openFileInput(readDay);
 
-            byte[] fileData=new byte[fis.available()];
+            byte[] fileData = new byte[fis.available()];
             fis.read(fileData);
             fis.close();
-
             str=new String(fileData);
 
             contextEditText.setVisibility(View.INVISIBLE);
@@ -165,12 +163,12 @@ public class FragmentMypage extends Fragment {
         FileOutputStream fos;
 
         try{
-            fos=openFileOutput(readDay);
-            String content="";
-            fos.write(string.getBytes());
+            fos = getContext().openFileOutput(readDay, Context.MODE_PRIVATE);
+            String content = "";
+            fos.write((content).getBytes());
             fos.close();
 
-        }catch (IOException e){
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
@@ -179,7 +177,8 @@ public class FragmentMypage extends Fragment {
         FileOutputStream fos;
 
         try{
-            fos= getActivity().openFileOutput(readDay, Context.MODE_PRIVATE);
+            fos = getContext().openFileOutput(readDay, Context.MODE_PRIVATE);
+            String content = "";
             fos.write((content).getBytes());
             fos.close();
         }catch (Exception e){
