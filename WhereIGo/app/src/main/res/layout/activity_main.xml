@@ -24,3 +24,4 @@
         app:menu="@menu/main_menu_bottom"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+<!--app:itemIconTint="@drawable/menu_item_color"-->
