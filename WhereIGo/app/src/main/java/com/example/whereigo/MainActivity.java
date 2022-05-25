@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.menu_bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
 
+        //gotomap으로 바로가기 버튼 클릭 event 처리
+        String str=getIntent().getStringExtra("goto_map");
+        if(str != null){
+            if(str.equals("move_map")){
+                FragmentTransaction trans = fragmentManager.beginTransaction();
+                trans.replace(R.id.menu_frame_layout, fragmentSearch).commitAllowingStateLoss();
+            }
+        }
+
 
     }
 
