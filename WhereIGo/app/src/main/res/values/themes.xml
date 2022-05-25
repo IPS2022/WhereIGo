@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.WhereIGo" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/maincolor</item>
+        <item name="colorPrimaryVariant">@color/maincolor</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -15,6 +15,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+
+    </style>
+
+    <style name="CalendarViewTheme">
+        <item name="colorAccent">#2196f3</item>
     </style>
 
 </resources>
