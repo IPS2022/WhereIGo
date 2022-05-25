@@ -3,10 +3,15 @@ package com.example.whereigo;
 import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +31,9 @@ public class Detail2Activity extends AppCompatActivity {
     DatabaseReference databaseReference4;
     String content1,content2,content3,content4,content5; //원인, 정의, 증상, 진료과,질병이름,치료
 
+    //지도로 바로가기
+    Button goto_map;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,15 @@ public class Detail2Activity extends AppCompatActivity {
         content11=findViewById(R.id.detail_disease_content2); //원인
         content13=findViewById(R.id.detail_disease_content3) ;//증상
         content15=findViewById(R.id.detail_disease_content4); //치료
+
+        //gotomap 바로가기버튼
+        goto_map=findViewById(R.id.goto_map); //지도로 바로가기 버튼
+        goto_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment();
+            }
+        });
 
         //database
         database4= FirebaseDatabase.getInstance();
@@ -74,6 +91,14 @@ public class Detail2Activity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+    }
+
+    //map 프래그먼트로 이동
+    public void replaceFragment(){
+        Intent intent=new Intent(this,MainActivity.class);
+        intent.putExtra("goto_map","move_map");
+        startActivity(intent);
+        finish();
     }
 
 }

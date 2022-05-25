@@ -196,42 +196,6 @@ public class FragmentSearch extends Fragment implements OnMapReadyCallback, Acti
     }
 
 
-    /*
-    //kakao api
-    // 키워드 검색 함수
-    private void searchKeyword(String keyword) {
-        //retrofit 객체 구성
-        Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
-                .client(httpClient.build())
-                .build();
-
-        KakaoAPI api=retrofit.create(KakaoAPI.class); // 통신 인터페이스를 객체로 생성
-        Call<ResultSearchKeyword> call=api.getSearchKeyword(API_KEY,keyword); // 검색 조건 입력
-
-        // API 서버에 요청
-        call.enqueue(new Callback<ResultSearchKeyword>() {
-            @Override
-            public void onResponse(Call<ResultSearchKeyword> call, Response<ResultSearchKeyword> response) {
-                // 통신 성공 (검색 결과는 response.body()에 담겨있음)
-                Log.d("Test", "Raw: ${response.raw()}");
-                Log.d("Test", "Body: ${response.body()}");
-            }
-
-            @Override
-            public void onFailure(Call<ResultSearchKeyword> call, Throwable t) {
-                Log.w("MainActivity", "통신 실패: ${t.message}");
-            }
-        });
-
-
-    }
-
-     */
-
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
