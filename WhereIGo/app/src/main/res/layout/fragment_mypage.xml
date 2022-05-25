@@ -69,7 +69,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="날짜를 선택해주세요"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
                 <CalendarView
                     android:id="@+id/calendarView"
@@ -82,6 +89,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.488"
+                    android:theme="@style/CalendarViewTheme"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -90,7 +98,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:gravity="center"
@@ -103,7 +110,7 @@
 
                 <EditText
                     android:id="@+id/contextEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
@@ -137,7 +144,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
                     <Button
                         android:id="@+id/save_Btn"
                         android:layout_width="wrap_content"
