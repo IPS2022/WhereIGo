@@ -2,6 +2,8 @@ package com.example.whereigo.recyclerview;
 
 import static android.content.ContentValues.TAG;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -17,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.whereigo.Detail2Activity;
+import com.example.whereigo.FragmentSearch;
 import com.example.whereigo.R;
 
 import java.util.ArrayList;
@@ -67,6 +70,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
                     }
                 }
             });
+
+
         }
 
         void onBind(Data item){
