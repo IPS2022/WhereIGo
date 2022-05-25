@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_main_logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/app_main_logo"
         android:supportsRtl="true"
@@ -35,7 +35,7 @@
             android:value="AIzaSyBL8azprV5drYS_omoLbg43OVXaCk-q4oc" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true" >
 
             <intent-filter>
@@ -46,7 +46,7 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
             android:exported="false"/>
 
         <activity
