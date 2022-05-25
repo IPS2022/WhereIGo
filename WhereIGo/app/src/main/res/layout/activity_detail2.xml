@@ -50,8 +50,8 @@
                 android:text="지도로 바로가기"
                 android:textSize="10dp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                android:backgroundTint="#2196f3"/>
+                android:textColor="#2196f3"
+                android:backgroundTint="#D6D8D7"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
