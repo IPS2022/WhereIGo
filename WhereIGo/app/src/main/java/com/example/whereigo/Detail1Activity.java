@@ -80,7 +80,7 @@ public class Detail1Activity extends AppCompatActivity {
 
 
                 for (String item : list2){
-                    mdataItems.add(new Data(item,item)); //disease(item), doctor_part 제대로 된 값으로,..
+                    mdataItems.add(new Data(item)); //disease(item), doctor_part 제대로 된 값으로,..
                 }
 
                 mRecyclerAdapter.setData(mdataItems);
