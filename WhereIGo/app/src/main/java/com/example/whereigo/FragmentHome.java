@@ -135,7 +135,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         TempDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.GRAY));
 
         TempDialog.show();
-        mCountDownTimer = new CountDownTimer(1200, 1000)
+        mCountDownTimer = new CountDownTimer(2000, 1000)
         {
             public void onTick(long millisUntilFinished)
             {

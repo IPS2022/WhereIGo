@@ -69,7 +69,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="날짜를 선택해주세요"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
                 <CalendarView
                     android:id="@+id/calendarView"
@@ -82,6 +89,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.488"
+                    android:theme="@style/CalendarViewTheme"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -90,11 +98,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:gravity="center"
-                    android:text="diary"
+                    android:text=" "
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +110,7 @@
 
                 <EditText
                     android:id="@+id/contextEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
@@ -134,45 +141,44 @@
                     app:layout_constraintTop_toTopOf="@+id/contextEditText" />
 
 
-                <Button
-                    android:id="@+id/save_Btn"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/save"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/save_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="#2196f3"/>
 
 
-                <Button
-                    android:id="@+id/cha_Btn"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/edit"
-                    android:visibility="visible"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/save_Btn"
-                    app:layout_constraintEnd_toStartOf="@+id/del_Btn"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <Button
+                        android:id="@+id/cha_Btn"
 
-                <Button
-                    android:id="@+id/del_Btn"
-                    android:layout_width="176dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/delete"
-                    android:visibility="visible"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
-                    app:layout_constraintEnd_toEndOf="@+id/save_Btn" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보기"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="#2196f3" />
+
+                    <Button
+                        android:id="@+id/del_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="#2196f3"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout

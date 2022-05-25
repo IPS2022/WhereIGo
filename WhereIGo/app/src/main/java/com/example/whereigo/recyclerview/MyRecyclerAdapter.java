@@ -49,12 +49,10 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
 
     class ViewHolder extends RecyclerView.ViewHolder{
         TextView disease;
-        TextView doctor_part;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             disease = (TextView) itemView.findViewById(R.id.disease);
-            doctor_part = (TextView) itemView.findViewById(R.id.doctor_part);
 
             itemView.setClickable(true);
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +71,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
 
         void onBind(Data item){
             disease.setText(item.getDisease());
-            doctor_part.setText(item.getDoctorpart());
         }
 
     }
