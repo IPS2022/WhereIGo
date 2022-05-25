@@ -4,9 +4,8 @@ public class Data {
     String disease;
     String doctorpart;
 
-    public Data(String disease,String doctorpart) {
+    public Data(String disease) {
         this.disease = disease;
-        this.doctorpart = doctorpart;
     }
 
     public String getDisease() {
