@@ -35,7 +35,7 @@ import java.util.Map;
 
 public class FragmentHome extends Fragment implements View.OnClickListener  {
 
-    ImageButton head, neck, shoulder, stomache, leftarm, rightarm, leftleg, rightleg;
+    ImageButton head, neck, shoulder, stomache, stomache2,stomache3,leftarm, rightarm, leftleg, rightleg;
     ArrayList<String> mSelectedItems;
     AlertDialog.Builder builder;
 
@@ -57,6 +57,8 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         neck = view.findViewById(R.id.neck);
         shoulder = view.findViewById(R.id.shoulder);
         stomache = view.findViewById(R.id.stomache);
+        stomache2=view.findViewById(R.id.stomache2);
+        stomache3=view.findViewById(R.id.stomache3);
         leftarm = view.findViewById(R.id.leftarm);
         rightarm = view.findViewById(R.id.rightarm);
         leftleg = view.findViewById(R.id.leftleg);
@@ -66,6 +68,8 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         neck.setOnClickListener(this);
         shoulder.setOnClickListener(this);
         stomache.setOnClickListener(this);
+        stomache2.setOnClickListener(this);
+        stomache3.setOnClickListener(this);
         leftarm.setOnClickListener(this);
         rightarm.setOnClickListener(this);
         leftleg.setOnClickListener(this);
@@ -108,6 +112,10 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
         }else if (view.getId() == R.id.shoulder){
             startdatabaseEvent("가슴");
         }else if (view.getId() == R.id.stomache){
+            startdatabaseEvent("배");
+        }else if (view.getId() == R.id.stomache2){
+            startdatabaseEvent("배");
+        }else if (view.getId() == R.id.stomache3){
             startdatabaseEvent("배");
         }else if (view.getId() == R.id.leftarm){
             startdatabaseEvent("팔");
