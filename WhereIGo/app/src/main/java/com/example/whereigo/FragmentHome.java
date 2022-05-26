@@ -2,8 +2,6 @@ package com.example.whereigo;
 
 import static android.content.ContentValues.TAG;
 
-import static com.firebase.ui.auth.AuthUI.getApplicationContext;
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -51,7 +49,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home2, container, false);
 
         head = view.findViewById(R.id.head);
         neck = view.findViewById(R.id.neck);

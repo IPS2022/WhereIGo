@@ -63,10 +63,10 @@ public class FragmentMypage extends Fragment {
             }
         });
 
-       /* mAuth=FirebaseAuth.getInstance();
+        mAuth=FirebaseAuth.getInstance();
         final FirebaseUser user=mAuth.getCurrentUser();
         tv_username.setText(user.getDisplayName());
-        tv_useremail.setText(user.getEmail());*/
+        tv_useremail.setText(user.getEmail());
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             //@SuppressLint("DefaultLocale")
