@@ -17,78 +17,125 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/detail_disease"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="질병명"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"
-                android:background="@drawable/underline"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="아파, "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/detail_disease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="질병명"
+                    android:textColor="#2196f3"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="3"
                 android:orientation="horizontal">
-            <TextView
-                android:id="@+id/detail_doctor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_gravity="center"
-                android:text="진료과"
-                android:textSize="15dp"/>
-            <Button
-                android:id="@+id/goto_map"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:text="지도로 바로가기"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"
-                android:backgroundTint="#D6D8D7"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="어디가? "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/detail_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="진료과"
+                    android:textSize="20dp"
+                    android:textColor="#2196f3"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/goto_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#D6D8D7"
+                    android:text="지도로 바로가기"
+                    android:textColor="#2196f3"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
             </LinearLayout>
+            <TextView
+                android:background="@drawable/underline"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:textSize="20dp"
+                android:text=" "
+                android:textColor="#2196f3"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="[질병 정의]"
+                android:textColor="#2196f3"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/detail_disease_content1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="질병 정의 내용"
                 android:textSize="15dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="[원인]"
+                android:textColor="#2196f3"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/detail_disease_content2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="질병 원인 내용"
                 android:textSize="15dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="[증상]"
+                android:textColor="#2196f3"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/detail_disease_content3"
                 android:layout_width="match_parent"
@@ -101,9 +148,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="[치료]"
+                android:textColor="#2196f3"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#2196f3"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/detail_disease_content4"
                 android:layout_width="match_parent"
