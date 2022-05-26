@@ -34,7 +34,6 @@ public class GenderActivity extends AppCompatActivity {
         setContentView(R.layout.select_gender);
 
         Button btn_woman=findViewById(R.id.womanBtn);
-        Button btn_man=findViewById(R.id.manBtn);
         btn_woman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,6 +41,16 @@ public class GenderActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn_man=findViewById(R.id.manBtn);
+        btn_man.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
