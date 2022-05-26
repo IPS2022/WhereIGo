@@ -12,18 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/select" />
-        </TableRow>
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/whereigo_logo" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -168,6 +162,14 @@
 
 
         </TableRow>
+
+        <TextView
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="원하는 부위를 선택해주세요!!" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -186,8 +188,6 @@
                 android:text="Back" />
 
         </LinearLayout>
-
-
 
     </TableLayout>
 </LinearLayout>

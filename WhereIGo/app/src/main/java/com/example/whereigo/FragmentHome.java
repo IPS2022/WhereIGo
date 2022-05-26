@@ -49,7 +49,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home2, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         head = view.findViewById(R.id.head);
         neck = view.findViewById(R.id.neck);
