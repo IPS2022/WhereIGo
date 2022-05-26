@@ -164,30 +164,14 @@
         </TableRow>
 
         <TextView
+            android:layout_marginTop="15dp"
             android:layout_width="206dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:gravity="center"
             android:text="원하는 부위를 선택해주세요!!" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/front"
-                android:layout_width="206dp"
-                android:layout_height="wrap_content"
-                android:text="Front" />
-
-            <Button
-                android:id="@+id/back"
-                android:layout_width="205dp"
-                android:layout_height="wrap_content"
-                android:text="Back" />
-
-        </LinearLayout>
 
     </TableLayout>
 </LinearLayout>
