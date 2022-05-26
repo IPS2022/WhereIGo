@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/drawable/bottom_icon_color.xml" value="0.157" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/drawable/menu_item_color.xml" value="0.1285" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/font/font.xml" value="0.2838541666666667" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_detail1.xml" value="0.23278985507246377" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_detail2.xml" value="0.22267206477732793" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_main.xml" value="0.20072992700729927" />
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
-        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/fragment_mypage.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/fragment_mypage.xml" value="0.16058394160583941" />
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/item_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/register_topbar.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/layout/scrap_item_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/Android Project/2022IPS/WhereIGo/WhereIGo/app/src/main/res/menu/main_menu_bottom.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/khapp/Desktop/mygithub/WhereIGo/WhereIGo/app/src/main/res/drawable/bg_round.xml" value="0.238" />
         <entry key="..\:/Users/khapp/Desktop/mygithub/WhereIGo/WhereIGo/app/src/main/res/drawable/border_round.xml" value="0.238" />
         <entry key="..\:/Users/khapp/Desktop/mygithub/WhereIGo/WhereIGo/app/src/main/res/layout/activity_detail1.xml" value="0.36614583333333334" />
