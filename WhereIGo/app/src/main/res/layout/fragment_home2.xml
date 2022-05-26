@@ -12,18 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/select" />
-        </TableRow>
+                app:srcCompat="@drawable/whereigo_logo" />
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -40,7 +35,7 @@
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/clickhead" />
+                app:srcCompat="@drawable/head" />
         </TableRow>
 
 
@@ -56,7 +51,7 @@
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/clickneck" />
+                app:srcCompat="@drawable/neck" />
 
         </TableRow>
 
@@ -73,7 +68,7 @@
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/clickshoulder" />
+                app:srcCompat="@drawable/shoulder" />
 
 
 
@@ -91,7 +86,7 @@
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
                 android:layout_marginLeft="50dp"
-                app:srcCompat="@drawable/clickstomache" />
+                app:srcCompat="@drawable/stomache" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -100,6 +95,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -110,7 +106,7 @@
                     android:layout_marginTop="-3dp"
                     android:layout_marginLeft="95dp"
                     android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/clickleftarm" />
+                    app:srcCompat="@drawable/leftarm" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -121,14 +117,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/clickstomache2" />
+                        app:srcCompat="@drawable/stomache2" />
 
                     <ImageButton
                         android:id="@+id/stomache3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/clickstomache2" />
+                        app:srcCompat="@drawable/stomache2" />
 
                 </LinearLayout>
 
@@ -139,7 +135,7 @@
                     android:layout_marginTop="-3dp"
                     android:background="@android:color/transparent"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/clickrightarm" />
+                    app:srcCompat="@drawable/rightarm" />
             </LinearLayout>
         </TableRow>
         <TableRow
@@ -153,7 +149,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/clickleftleg" />
+                app:srcCompat="@drawable/leftleg" />
 
             <ImageButton
                 android:id="@+id/rightleg"
@@ -163,7 +159,7 @@
                 android:layout_marginLeft="-90dp"
                 android:layout_marginTop="-3dp"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/clickrightleg" />
+                app:srcCompat="@drawable/rightleg" />
 
 
 
@@ -171,6 +167,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
+            android:layout_gravity="center"
             android:layout_height="wrap_content">
 
             <Button
