@@ -2,7 +2,8 @@
 for 2022 IPS contest
 
 ## 📌 아파, 어디가?
-![image](https://user-images.githubusercontent.com/64300626/170614422-df42ec22-9641-47e6-a084-8801232a4cf2.png)
+![image](https://user-images.githubusercontent.com/64300626/170614707-2ad76134-3d76-4e4c-9052-c09e19dd4d1c.png)
+
 
 ## 🔊 개발 배경
 ![image](https://user-images.githubusercontent.com/64300626/170614472-3e96b412-ffce-4214-938d-c7734f7a3b21.png)
@@ -17,8 +18,34 @@ https://user-images.githubusercontent.com/64300626/170613402-c70af901-6c97-49b2-
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>
 
+## ✨ Feature introduction
+### 🔸 Register & Login
+![image](https://user-images.githubusercontent.com/64300626/170615106-31d3551b-b8d8-4d26-9733-6cf9eafa443f.png)
 
-## 
+
+### 🔸 Main Page
+![image](https://user-images.githubusercontent.com/64300626/170615161-ef1543fd-a59c-4643-b49c-6fc7cf99401d.png)
+![image](https://user-images.githubusercontent.com/64300626/170615189-21001582-f15e-45f9-9343-e62797e93e0f.png)
+
+
+### 🔸 Search Page
+![image](https://user-images.githubusercontent.com/64300626/170615204-4c08c933-ab28-4cc1-a947-a8b7b772049e.png)
+
+### 🔸 My Page
+![image](https://user-images.githubusercontent.com/64300626/170615218-3e26b393-e8ba-48c6-9957-0d0e0fa8ffc4.png)
+
+## 발전 가능성
+![image](https://user-images.githubusercontent.com/64300626/170615279-db2482bc-6005-49c5-a5d9-dd170bf994d0.png)
+
+
+## 🙆‍♀ Team Member 
+Jinyoung Kim ([@zhenying2](https://github.com/zhenying2))<br/>
+Jueun Kim ([@Jueunkim429](https://github.com/Jueunkim429)) <br/>
+Kyungmin Lee ([@kyungminlee-12](https://github.com/kyungminlee-12))<br/>
+Jaewon Han([@Hanjaewon0215](https://github.com/Hanjaewon0215))<br/> 
+Jungin Hong([@hongjungin](https://github.com/hongjungin))
+<br/><br/>
+
 
 ## 💚 주차별 개발 마지노선(목표)
 | 주차/날짜 | 개발 상황 |
