@@ -1,6 +1,25 @@
 # 👣 WhereIGo
 for 2022 IPS contest
 
+## 📌 아파, 어디가?
+![image](https://user-images.githubusercontent.com/64300626/170614422-df42ec22-9641-47e6-a084-8801232a4cf2.png)
+
+## 🔊 개발 배경
+![image](https://user-images.githubusercontent.com/64300626/170614472-3e96b412-ffce-4214-938d-c7734f7a3b21.png)
+
+
+## 🎞 시연 영상
+https://user-images.githubusercontent.com/64300626/170613402-c70af901-6c97-49b2-aed6-a6d371236334.mp4
+
+
+## 🛠 Tech Stack
+<img src="https://img.shields.io/badge/AndroidStudio-3DDC84?style=flat-square&logo=androidstudio&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>
+
+
+## 
+
 ## 💚 주차별 개발 마지노선(목표)
 | 주차/날짜 | 개발 상황 |
 |:----------:|:----------|
