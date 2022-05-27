@@ -39,12 +39,10 @@ https://user-images.githubusercontent.com/64300626/170613402-c70af901-6c97-49b2-
 
 
 ## 🙆‍♀ Team Member 
-Jinyoung Kim ([@zhenying2](https://github.com/zhenying2))<br/>
-Jueun Kim ([@Jueunkim429](https://github.com/Jueunkim429)) <br/>
-Kyungmin Lee ([@kyungminlee-12](https://github.com/kyungminlee-12))<br/>
-Jaewon Han([@Hanjaewon0215](https://github.com/Hanjaewon0215))<br/> 
-Jungin Hong([@hongjungin](https://github.com/hongjungin))
-<br/><br/>
+|Jinyoung Kim<br/>([@zhenying2](https://github.com/zhenying2))|Jueun Kim<br/>([@Jueunkim429](https://github.com/Jueunkim429))|Kyungmin Lee<br/>([@kyungminlee-12](https://github.com/kyungminlee-12))|Jaewon Han<br/>([@Hanjaewon0215](https://github.com/Hanjaewon0215))|Jungin Hong<br/>([@hongjungin](https://github.com/hongjungin))|
+|:----------:|:----------:|:----------:|:----------:|:----------:|
+|Developer<br/>Project Manager|Developer<br/>Project Manager|Project Lead<br/>Developer<br/>Project Manager|Developer<br/>Project Manager|Developer<br/>Project Manager|
+|![](https://github.com/zhenying2.png)|![](https://github.com/Jueunkim429.png)|![](https://github.com/kyungminlee-12.png)|![](https://github.com/hongjungin.png)|![](https://github.com/Hanjaewon0215.png)|
 
 
 ## 💚 주차별 개발 마지노선(목표)
