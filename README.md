@@ -1,7 +1,6 @@
-# 👣 WhereIGo
+# 👣 아파, 어디가?
 for 2022 IPS contest
 
-## 📌 아파, 어디가?
 ![image](https://user-images.githubusercontent.com/64300626/170614707-2ad76134-3d76-4e4c-9052-c09e19dd4d1c.png)
 
 
